@@ -16,17 +16,20 @@ const displayPet = (pet) => {
         const PetContainer = document.getElementById('petContainer');
         const card = document.createElement('div');
         card.innerHTML =
-                           `
-                       <div class="card w-80 bg-base-100 shadow-sm grid  mx-auto">
-  <div class="card-body">
-    <div>
-         <img class="rounded-xl" src=${element.image}/>
-    </div>
-    <div>
-        
-    </div>
-</div>
-                     `
+                          
+        `
+                <div class="card w-80 bg-base-100 shadow-sm mx-auto">
+                     <div class="card-body">
+                    <div>
+                         <img class="rounded-xl" src=${element.image}/>
+                    </div>
+                        <p class="">${element.pet_name}</p>
+
+                    </div>
+                 </div>
+                 
+                
+                `
       PetContainer.append(card) 
     });
 }
