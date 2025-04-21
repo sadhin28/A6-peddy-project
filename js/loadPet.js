@@ -23,7 +23,11 @@ const displayPet = (pet) => {
                     <div>
                          <img class="rounded-xl" src=${element.image}/>
                     </div>
-                        <p class="">${element.pet_name}</p>
+                        <p class="font-bold text-xl">${element.pet_name}</p>
+                        <p>Breed : ${element.breed}</p>
+                        <p><i class="fa-solid fa-cake-candles"></i> Birth : ${element.date_of_birth}</p>
+                        <p><i class="fa-solid fa-mercury"></i> Gender : ${element.gender}</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> Price : ${element.price} $</p>
 
                     </div>
                  </div>
