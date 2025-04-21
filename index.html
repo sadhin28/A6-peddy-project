@@ -14,7 +14,7 @@
 
 </head>
 <body class="w-11/12 mx-auto">
-    <header>
+    <header class="sticky top-0 z-100 ">
         <div class="navbar bg-base-100 shadow-sm flex justify-between items-center">
             
                 <div class="flex gap-3 font-bold justify-center items-center">
@@ -49,7 +49,7 @@
             <div>
                 <button class="btn mt-5 bg-[#0E7A81] text-white rounded-xl">View More</button>
             </div>
-            <div class="h-full w-100 lg:w-full md:w-120 mx-auto">
+            <div class="">
                 <img class=""  src="images/pet.webp" alt="">
             </div>
         </section>
@@ -65,12 +65,19 @@
          <!-- Sort by Price section -->
           <div class="flex justify-between mb-20 items-center">
             <h1 class="text-xl font-bold">Best Deal For you</h1>
+          
             <button class="btn mt-5 bg-[#0E7A81] text-white rounded-xl">Sort by Price</button>
+          
           </div>
+          <!-- pet container -->
+          <section id="petContainer" class="grid lg:grid-cols-3 md:grid-rows-2 gap-5">
+             
+          </section>
     </main>
     <footer>
 
     </footer>
+    <script src="js/loadPet.js"></script>
     <script src="js/categories.js"></script>
 </body>
 </html>
