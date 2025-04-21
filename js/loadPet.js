@@ -1,6 +1,5 @@
 
-
-const LoadVideos = () => {
+const Loadpet = () => {
     fetch(`https://openapi.programming-hero.com/api/peddy/pets`)
         .then(res => res.json())
         .then((data) => displayPet(data.pets
@@ -12,7 +11,6 @@ const LoadVideos = () => {
 //displayPet
 const displayPet = (pet) => {
     pet.forEach(element => {
-        console.log(element)
         const PetContainer = document.getElementById('petContainer');
         const card = document.createElement('div');
         card.innerHTML =`
@@ -41,4 +39,4 @@ const displayPet = (pet) => {
     });
 }
 
-LoadVideos()
+Loadpet()
