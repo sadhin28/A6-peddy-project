@@ -9,11 +9,15 @@ const Loadpet = () => {
         .catch((error) => console.log(error))
 
 };
+
+
+
 //displayPet
 const displayPet = (pet) => {
     pet.forEach(element => {
-        
+        // console.log(element)
         const PetContainer = document.getElementById('petContainer');
+       
         const card = document.createElement('div');
         card.innerHTML =`
                 <div class="card w-80 bg-base-100 shadow-sm mx-auto">
@@ -42,6 +46,8 @@ const displayPet = (pet) => {
       
     });
 }
+
+
 //load details
 const loadDetails =(id)=>{
     fetch(`https://openapi.programming-hero.com/api/peddy/pet/${id}`)
@@ -78,36 +84,38 @@ const displayDetails =(data)=>{
 
 }
 
+
 //likePet
 const loadimage =(id)=>{
     fetch(`https://openapi.programming-hero.com/api/peddy/pet/${id}`)
     .then((res)=>res.json())
     .then((img)=>displayLikeImg(img.petData.image))
 }
+
+
 //likePetDisplayImg
 const displayLikeImg=(image)=>
 {
    const divs = document.createElement('div') 
    const likepet = document.getElementById('likePetContainer');
-   divs.style.width="60px"
+   divs.style.width="80px"
    divs.style.height="60px"
    divs.innerHTML=`
 
-    <img class="rounded-2xl mx-auto" src=${image}/>
+    <img class="rounded-sm mx-auto" src=${image}/>
    `
    likepet.append(divs)
 
 }
+
+
 //shoeAddoptModal
-const countdown =(id)=>{
-    
-}
-
-
 function startCountdownModal() {
+    const modal = document.getElementById('modal');
     const count = document.getElementById('count');
     let i = 3;
-    document.getElementById('Showmodal').click()
+
+    modal.classList.remove('hidden');
     count.textContent = i;
 
     const timer = setInterval(() => {
@@ -116,7 +124,7 @@ function startCountdownModal() {
         count.textContent = i;
       } else {
         clearInterval(timer);
-        document.getElementById('Showmodal').classList.add('hidden')
+        modal.classList.add('hidden');
       }
     }, 1000);
   }
