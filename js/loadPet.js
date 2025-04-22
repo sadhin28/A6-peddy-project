@@ -29,7 +29,7 @@ const displayPet = (pet) => {
                         <div class="divider"></div>
                         <div class="flex justify-between" >
                             <button onclick="loadimage(${element.petId})" class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81]"><i class=" border-cyan-950 text-black fa-solid fa-thumbs-up"></i></button>
-                            <button id="countdownBtn" onclick="countdown()" class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81]">Adopt</button>
+                            <button id="countdownBtn" onclick="startCountdownModal()" class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81]">Adopt</button>
                             <button onclick="loadDetails(${element.petId})" class="btn rounded-xl  bg-[#0E7A811A] font-bold text-[#0E7A81]">Details</i></button>
                         </div>
                     </div>
@@ -99,43 +99,25 @@ const displayLikeImg=(image)=>
 
 }
 //shoeAddoptModal
+const countdown =(id)=>{
+    
+}
 
-  
 
-
-  function countdown(id) {
-    const modal = document.getElementById('modal');
+function startCountdownModal() {
     const count = document.getElementById('count');
     let i = 3;
-    const btn=document.getElementById('countdownBtn')
- // Disable the button
- btn.disabled = true;
-
- // Optional: Add styling to show it's disabled
- btn.classList.add("opacity-50", "cursor-not-allowed");
-    // Show modal
-    modal.classList.remove('hidden');
+    document.getElementById('Showmodal').click()
     count.textContent = i;
 
     const timer = setInterval(() => {
       i--;
-      if (i > 0 ) {
+      if (i > 0) {
         count.textContent = i;
-        const btn=document.getElementById('countdownBtn')
-        btn.disabled = true;
-        btn.classList.add('opacity-50', 'cursor-not-allowed');
-         
       } else {
         clearInterval(timer);
-        modal.classList.add('hidden');
-        
-        // Button stays disabled forever (one-time only)
+        document.getElementById('Showmodal').classList.add('hidden')
       }
     }, 1000);
-   
-   
-  }
-  function disableThisButton(button) {
-   
   }
 Loadpet()
