@@ -89,8 +89,11 @@ const displayLikeImg=(image)=>
 {
    const divs = document.createElement('div') 
    const likepet = document.getElementById('likePetContainer');
+   divs.style.width="100px"
+   divs.style.height="100px"
    divs.innerHTML=`
-    <img src=${image}/>
+
+    <img class="" src=${image}/>
    `
    likepet.append(divs)
 
