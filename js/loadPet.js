@@ -12,7 +12,7 @@ const Loadpet = () => {
 //displayPet
 const displayPet = (pet) => {
     pet.forEach(element => {
-        // console.log(element.petId)
+        
         const PetContainer = document.getElementById('petContainer');
         const card = document.createElement('div');
         card.innerHTML =`
@@ -28,7 +28,7 @@ const displayPet = (pet) => {
                         <p><i class="fa-solid fa-dollar-sign"></i> Price : ${element.price} $</p>
                         <div class="divider"></div>
                         <div class="flex justify-between" >
-                            <button class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81]"><i class=" border-cyan-950 text-black fa-solid fa-thumbs-up"></i></button>
+                            <button onclick="loadimage(${element.petId})" class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81]"><i class=" border-cyan-950 text-black fa-solid fa-thumbs-up"></i></button>
                             <button class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81]">Adopt</button>
                             <button onclick="loadDetails(${element.petId})" class="btn rounded-xl  bg-[#0E7A811A] font-bold text-[#0E7A81]">Details</i></button>
                         </div>
@@ -38,6 +38,8 @@ const displayPet = (pet) => {
                 
                 `
       PetContainer.append(card) 
+    
+      
     });
 }
 //load details
@@ -72,5 +74,25 @@ const displayDetails =(data)=>{
         <P>${data.petData.pet_details}</P>
          <div class="divider"></div>
     `
+   
+
+}
+
+//likePet
+const loadimage =(id)=>{
+    fetch(`https://openapi.programming-hero.com/api/peddy/pet/${id}`)
+    .then((res)=>res.json())
+    .then((img)=>displayLikeImg(img.petData.image))
+}
+//likePetDisplayImg
+const displayLikeImg=(image)=>
+{
+   const divs = document.createElement('div') 
+   const likepet = document.getElementById('likePetContainer');
+   divs.innerHTML=`
+    <img src=${image}/>
+   `
+   likepet.append(divs)
+
 }
 Loadpet()
