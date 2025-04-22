@@ -29,7 +29,7 @@ const displayPet = (pet) => {
                         <div class="divider"></div>
                         <div class="flex justify-between" >
                             <button onclick="loadimage(${element.petId})" class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81]"><i class=" border-cyan-950 text-black fa-solid fa-thumbs-up"></i></button>
-                            <button class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81]">Adopt</button>
+                            <button id="countdownBtn" onclick="countdown()" class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81]">Adopt</button>
                             <button onclick="loadDetails(${element.petId})" class="btn rounded-xl  bg-[#0E7A811A] font-bold text-[#0E7A81]">Details</i></button>
                         </div>
                     </div>
@@ -56,15 +56,15 @@ const displayDetails =(data)=>{
     detailsContainer.innerHTML=`
 
         <img class="rounded-2xl object-cover h-70 w-full " src=${data.petData.image}/>
-         <p class="font-bold text-xl mt-5">${data.petData.pet_name}</p>
-        <div class="flex gap-10 mt-5">
+         <p class="font-bold text-xl mt-2">${data.petData.pet_name}</p>
+        <div class="flex gap-10 mt-2">
        
                        <div> 
                             <p>Breed : ${data.petData.breed}</p>
                              <p><i class="fa-solid fa-cake-candles"></i> Birth : ${data.petData.date_of_birth}</p>
                        </div>
                        <div>
-                            <p><i class="fa-solid fa-mercury"></i> Gender : ${data.petData.gender}</p>
+                            <p class="text-justify"><i class="fa-solid fa-mercury"></i> Gender : ${data.petData.gender}</p>
                         <p><i class="fa-solid fa-dollar-sign"></i> Price : ${data.petData.price} $</p>
                        </div>
                         
@@ -98,8 +98,44 @@ const displayLikeImg=(image)=>
    likepet.append(divs)
 
 }
-//addopotModal
-const adoptModal=()=>{
-    document.getElementById('adopt').
-}
+//shoeAddoptModal
+
+  
+
+
+  function countdown(id) {
+    const modal = document.getElementById('modal');
+    const count = document.getElementById('count');
+    let i = 3;
+    const btn=document.getElementById('countdownBtn')
+ // Disable the button
+ btn.disabled = true;
+
+ // Optional: Add styling to show it's disabled
+ btn.classList.add("opacity-50", "cursor-not-allowed");
+    // Show modal
+    modal.classList.remove('hidden');
+    count.textContent = i;
+
+    const timer = setInterval(() => {
+      i--;
+      if (i > 0 ) {
+        count.textContent = i;
+        const btn=document.getElementById('countdownBtn')
+        btn.disabled = true;
+        btn.classList.add('opacity-50', 'cursor-not-allowed');
+         
+      } else {
+        clearInterval(timer);
+        modal.classList.add('hidden');
+        
+        // Button stays disabled forever (one-time only)
+      }
+    }, 1000);
+   
+   
+  }
+  function disableThisButton(button) {
+   
+  }
 Loadpet()
