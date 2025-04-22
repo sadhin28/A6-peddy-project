@@ -34,7 +34,7 @@
            
         </div>
     </header>
-    <main>
+    <main class="mb-20">
         <!-- Your pet Adopting Section -->
         <section class=" mb-10 text-center mt-20 lg:w-150 md:w-120 mx-auto">
             <div>
@@ -70,16 +70,32 @@
           
           </div>
           <!-- pet container -->
-          <section class="flex justify-between">
-               <div id="petContainer" class="grid lg:grid-cols-3 md:grid-cols-2 gap-10 ">
-                   
-               </div>
-               <div id="likePetContainer" class="">
-
-               </div>
-          </section>
+         <div class="lg:flex lg:justify-between md:flex md:justify-between">
+                <div id="petContainer" class="grid lg:grid-cols-3 md:grid-cols-2 gap-10   bg-base-100   border-red-950 ">
+                    
+                </div>
+               
+           
+                <div id="likePetContainer" class="card w-80 mx-auto mt-5 lg:mt-0 md:mt-0 lg:w-70 h-full  grid grid-cols-5 lg:grid-cols-3 md:grid-cols-2  gap-3 bg-base-100 shadow-sm  p-5 ">
+ 
+                </div>
+         </div>
     </main>
     <button id="showmodal" class="btn hidden" onclick="customModalData.showModal()">open modal</button>
+    <dialog id="customModalData" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="modalcontent">
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button id="modalClose" class="btn bg-[#0E7A811A]  text-[#0E7A81]">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <button id="adopt" class="btn hidden" onclick="customModalData.showModal()">open modal</button>
     <dialog id="customModalData" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box">
             <div id="modalcontent">

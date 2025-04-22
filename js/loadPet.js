@@ -89,13 +89,17 @@ const displayLikeImg=(image)=>
 {
    const divs = document.createElement('div') 
    const likepet = document.getElementById('likePetContainer');
-   divs.style.width="100px"
-   divs.style.height="100px"
+   divs.style.width="60px"
+   divs.style.height="60px"
    divs.innerHTML=`
 
-    <img class="" src=${image}/>
+    <img class="rounded-2xl mx-auto" src=${image}/>
    `
    likepet.append(divs)
 
+}
+//addopotModal
+const adoptModal=()=>{
+    document.getElementById('adopt').
 }
 Loadpet()
