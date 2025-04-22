@@ -79,6 +79,20 @@
                </div>
           </section>
     </main>
+    <button id="showmodal" class="btn hidden" onclick="customModalData.showModal()">open modal</button>
+    <dialog id="customModalData" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="modalcontent">
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button id="modalClose" class="btn bg-[#0E7A811A]  text-[#0E7A81]">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
     <footer>
 
     </footer>

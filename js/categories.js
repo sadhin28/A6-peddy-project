@@ -23,6 +23,7 @@ const displayCatagories = (data)=>{
      });
 }
 
+//show details
 
 
 loadCatagories()
