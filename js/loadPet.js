@@ -14,9 +14,27 @@ const Loadpet = () => {
 
 //displayPet
 const displayPet = (pet) => {
+  const PetContainer = document.getElementById('petContainer');
+  // console.log(pet)
+    if(pet.length == 0){
+      PetContainer.classList.remove("grid")
+      PetContainer.innerHTML=`
+      <div class="min-h-[500px] w-[1100px] mx-auto flex flex-col gap-5 justify-center items-center">
+          
+      <img class=" p-20 h-[] w-[] mx-auto " src="images/error.webp"/>
+
+      <p class=" font-bold lg:text-2xl md:text-2xl ">Oops!! Sorry, There is no   content here</p>
+      
+      </div> 
+
+      `
+
+    }else{
+      PetContainer.classList.add("grid")
+    }
     pet.forEach(element => {
         // console.log(element)
-        const PetContainer = document.getElementById('petContainer');
+      
        
         const card = document.createElement('div');
         card.innerHTML =`

@@ -14,15 +14,15 @@ const displayCatagories = (data)=>{
      const CategoriesContainer = document.getElementById('categoriesContainer');
      data.forEach(element => {
              const ct =(element.id)
-             console.log(ct)
+            //  console.log(ct-1)
          const buttonCatagories = document.createElement('div');
          buttonCatagories.innerHTML=
          `
-                <button id="pets"  onclick="displayPetsIndividual(${ct})"  class= "btn category-btn lg:p-6 lg:text-2xl lg:2  " ><img class="h-5 w-5 lg:h-10 lg:w-10 md:h-8 md:w-8" src=${element.category_icon} />${element.category}</button>
+                <button id="btn${ct}"  onclick="displayPetsIndividual(${ct})"  class= "btn category-btn lg:p-6 lg:text-2xl lg:2  " ><img class="h-5 w-5 lg:h-10 lg:w-10 md:h-8 md:w-8" src=${element.category_icon} />${element.category}</button>
          `
          CategoriesContainer.append(buttonCatagories)
       
-     
+       
        
      });
 
@@ -34,9 +34,15 @@ const displayCatagories = (data)=>{
 const individualCatagory =(id)=>{
     fetch(`https://openapi.programming-hero.com/api/peddy/category/${id}`)
         .then((res)=>res.json())
-        .then((data)=>displayPet(data.data))
+        .then((data)=>{
+
+            displayPet(data.data)
+            // console.log(data.data)
+            
+        })
         const PetContainer = document.getElementById('petContainer');
-        PetContainer.innerText=""
+        PetContainer.innerText=""; 
+        
 }
 
 const displayPetsIndividual=(id)=>{
@@ -46,7 +52,20 @@ const displayPetsIndividual=(id)=>{
         individualCatagory(data.categories[id-1].category.toLowerCase())
     })
     .catch((error) => console.log(error) )
-   
+    
 }
+
+
+//removeActive button class
+const removeActiveClass=()=>{
+    const buttons = document.getElementsByClassName("category-btn");
+    
+    for(let btn of buttons){
+      btn.classList.remove('active');
+    }
+  }
+//
+
+
 loadCatagories()
 
