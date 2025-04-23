@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,28 +14,35 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="index.css">
 </head>
-<body class="w-11/12 mx-auto">
+
+<body class="">
     <header class="sticky top-0 z-100 ">
         <div class="navbar bg-base-100 shadow-sm flex justify-between items-center">
-            
-                <div class="flex gap-3 font-bold justify-center items-center">
-                    <img class="h-5 w-5 lg:h-8 lg:w-8 " src="images/logo.webp" alt="">
-                    <h1 class=" text-xl lg:text-2xl">Peddy</h1>
-                 </div>
-                 <div>
-                    <ul class=" flex gap-5">
-                        <a href="#home"><li>Home</li></a>
-                        <a href="">  <li>Shop</li></a>
-                        <a href=""> <li>Contact</li></a>
-                    </ul>
-                 </div>
-                 <div class=" border-red-950 text-center bg-gray-800 h-10 w-10 rounded-full  ">
-                    <a class="" href=""><i class="text-xl text-white  fa-solid fa-user  py-2.5"></i></a>
-                 </div>
-           
+
+            <div class="flex gap-3 font-bold justify-center items-center">
+                <img class="h-5 w-5 lg:h-8 lg:w-8 " src="images/logo.webp" alt="">
+                <h1 class=" text-xl lg:text-2xl">Peddy</h1>
+            </div>
+            <div>
+                <ul class=" flex gap-5">
+                    <a href="#home">
+                        <li>Home</li>
+                    </a>
+                    <a href="">
+                        <li>Shop</li>
+                    </a>
+                    <a href="">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+            <div class=" border-red-950 text-center bg-gray-800 lg:h-10 lg:w-10 w-9 rounded-full  ">
+                <a class="" href=""><i class=" text-white  fa-solid fa-user  py-2.5"></i></a>
+            </div>
+
         </div>
     </header>
-    <main class="mb-20">
+    <main class="mb-20 w-11/12 mx-auto">
         <!-- Your pet Adopting Section -->
         <section id="home" class=" mb-10 text-center mt-20 lg:w-150 md:w-120 mx-auto">
             <div>
@@ -44,41 +52,48 @@
                 <h1 class=" mt-5 text-xl lg:text-4xl md:text-2xl font-bold">
                     Your Path to Adoption <br>Start Here
                 </h1>
-                <p class="mt-4 text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+                <p class="mt-4 text-center">It is a long established fact that a reader will be distracted by the
+                    readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has
+                    a.</p>
             </div>
             <div>
                 <button class="btn mt-5 bg-[#0E7A81] text-white rounded-xl">View More</button>
             </div>
             <div class="">
-                <img class=""  src="images/pet.webp" alt="">
+                <img class="" src="images/pet.webp" alt="">
             </div>
         </section>
         <!-- Adopt  Your  Best Friend -->
         <section class=" mb-10 text-center mt-20 lg:w-150 md:w-120 mx-auto">
-            <h1 class="text-center font-bold text-xl lg:text-3xl md:text-2xl mb-4">Adopt  Your  Best Friend</h1>
-            <p class="">Adopt your best friend and discover the joy of unconditional love. Thousands of pets in shelters are waiting for someone like you to give them a second chance. Whether you choose a playful puppy, a gentle cat, or a loyal older pet, you'll gain a faithful companion who brings happiness every day. Open your heart and home—adopting a pet is one of the most rewarding decisions you’ll ever make.</p>
+            <h1 class="text-center font-bold text-xl lg:text-3xl md:text-2xl mb-4">Adopt Your Best Friend</h1>
+            <p class="">Adopt your best friend and discover the joy of unconditional love. Thousands of pets in shelters
+                are waiting for someone like you to give them a second chance. Whether you choose a playful puppy, a
+                gentle cat, or a loyal older pet, you'll gain a faithful companion who brings happiness every day. Open
+                your heart and home—adopting a pet is one of the most rewarding decisions you’ll ever make.</p>
         </section>
         <!-- Button category -->
-         <section id="categoriesContainer" class="flex mb-10 justify-between">
+        <section id="categoriesContainer" class="flex mb-10 justify-between">
 
-         </section>
-         <!-- Sort by Price section -->
-          <div class="flex justify-between mb-20 items-center">
+        </section>
+        <!-- Sort by Price section -->
+        <div class="flex justify-between mb-20 items-center">
             <h1 class="text-xl font-bold">Best Deal For you</h1>
-          
+
             <button class="btn mt-5 bg-[#0E7A81] text-white rounded-xl">Sort by Price</button>
-          
-          </div>
-          <!-- pet container -->
-         <div class="lg:flex lg:justify-between md:flex md:justify-between">
-                <div id="petContainer" class="card bg-base-100 shadow-sm  grid lg:grid-cols-3 md:grid-cols-2 gap-10   bg-base-100   border-red-950 ">
-                    
-                </div>
-               
-                <div id="likePetContainer" class="card  mx-auto mt-5 lg:mt-0 md:mt-0 lg:w-70 md:w-50 h-full  grid grid-cols-5 lg:grid-cols-3 md:grid-cols-2  gap-3 bg-base-100 shadow-sm  p-5 ">
- 
-                </div>
-         </div>
+
+        </div>
+        <!-- pet container -->
+        <div class="lg:flex lg:justify-between md:flex md:justify-between">
+            <div id="petContainer"
+                class="card bg-base-100 shadow-sm  grid lg:grid-cols-3 md:grid-cols-2 gap-10   bg-base-100   border-red-950 ">
+
+            </div>
+
+            <div id="likePetContainer"
+                class="card  mx-auto mt-5 lg:mt-0 md:mt-0 lg:w-70 md:w-50 h-full  grid grid-cols-5 lg:grid-cols-3 md:grid-cols-2  gap-3 bg-base-100 shadow-sm  p-5 ">
+
+            </div>
+        </div>
     </main>
 
     <!-- pet details Modal -->
@@ -96,24 +111,80 @@
             </div>
         </div>
     </dialog>
-    
 
-<!-- Modal addobpt modal -->
-<div id="modal" class="fixed inset-0 bg-opacity-50 flex justify-center items-center hidden z-50 ">
-    <div class=" bg-white text-center px-10 py-8 rounded-3xl shadow-xl space-y-4">
 
-      <div class="text-3xl font-medium ">
-        <p><i class="fa-solid fa-handshake"></i></p>
-        <p class="text-green-600">Congrates !</p>
-      </div>
-      <div><p class="text-black">Addoption Process is Start For Your Pet</p></div>
-      <div class="text-5xl font-bold" id="count">3</div>
+    <!-- Modal addobpt modal -->
+    <div id="modal" class="fixed inset-0 bg-opacity-50 flex justify-center items-center hidden z-50 ">
+        <div class=" bg-white text-center px-10 py-8 rounded-3xl shadow-xl space-y-4">
+
+            <div class="text-3xl font-medium ">
+                <p><i class="fa-solid fa-handshake"></i></p>
+                <p class="text-green-600">Congrates !</p>
+            </div>
+            <div>
+                <p class="text-black">Addoption Process is Start For Your Pet</p>
+            </div>
+            <div class="text-5xl font-bold" id="count">3</div>
+        </div>
     </div>
-  </div>
-    <footer>
 
+
+
+
+
+
+
+
+
+    <footer class="footer sm:footer-vartical bg-neutral text-neutral-content px-10 ">
+        <div class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 ">
+            <nav>
+                <div class="flex items-center gap-3">
+                    <img src="images/logo.webp" alt="">
+                    <p class="text-2xl font-bold">Peddy</p>
+                </div>
+                <p>Location: av. Washington 165, NY CA 54003 <br>
+                    Phone: +31 85 964 47 25 <br>
+                    Email: info@yourdomain.com <br>
+                    Openings hours: 9.00 AM - 5.00 PM</p>
+            </nav>
+            <nav>
+                <h6 class="footer-title">Useful Links</h6>
+                <a href="#home">Home</a>
+                <a href=""> Shop</a>
+                <a href="">Contact</a>
+            </nav>
+            <nav>
+                <h6 class="footer-title">Drop a Message</h6>
+                <input placeholder="Enter your email" class="input bg-gray-300 text-black rounded-xl " type="text"
+                    name="" id="inputEmail">
+                    <div id="message"></div>
+                    <button id="Subscribe"
+                    class=" mt-5 w-70 btn border-none bg-[#0E7A81] text-white rounded-xl">Subscribe</button>
+            </nav>
+        </div>
+        <div class="mx-auto mb-10">
+            <h1 class="font-bold">&copy; All right reserved by Peddy <span id="year"></span></h1>
+        </div>
     </footer>
+    <script>
+        const years = new Date()
+        document.getElementById('year').textContent = years.getFullYear();
+        document.getElementById('Subscribe').addEventListener('click', function () {
+        
+        const  inputemail = document.getElementById('inputEmail').value
+           if(inputemail === '' || !isNaN(inputemail)){
+             alert('Place Enter Your Valid Email')
+             document.getElementById('inputEmail').value =''
+           }
+           else{
+            alert(`Thank's For Subscribe By Your Email: ${inputemail}` );
+             document.getElementById('inputEmail').value =''
+           }
+        })
+    </script>
     <script src="js/loadPet.js"></script>
     <script src="js/categories.js"></script>
 </body>
+
 </html>
