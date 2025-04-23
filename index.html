@@ -14,8 +14,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="index.css">
 </head>
-
+<!-- body -->
 <body class="">
+    <!-- header section -->
     <header class="sticky top-0 z-100 ">
         <div class="navbar bg-base-100 shadow-sm flex justify-between items-center">
 
@@ -57,14 +58,15 @@
                     a.</p>
             </div>
             <div>
-                <button class="btn mt-5 bg-[#0E7A81] text-white rounded-xl">View More</button>
+                <a class="btn mt-5 bg-[#0E7A81] text-white rounded-xl" href="#AdoptBestFriend">View More</a>
+               
             </div>
             <div class="">
                 <img class="" src="images/pet.webp" alt="">
             </div>
         </section>
         <!-- Adopt  Your  Best Friend -->
-        <section class=" mb-10 text-center mt-20 lg:w-150 md:w-120 mx-auto">
+        <section id="AdoptBestFriend" class=" mb-10 text-center mt-20 lg:w-150 md:w-120 mx-auto">
             <h1 class="text-center font-bold text-xl lg:text-3xl md:text-2xl mb-4">Adopt Your Best Friend</h1>
             <p class="">Adopt your best friend and discover the joy of unconditional love. Thousands of pets in shelters
                 are waiting for someone like you to give them a second chance. Whether you choose a playful puppy, a
@@ -129,13 +131,7 @@
     </div>
 
 
-
-
-
-
-
-
-
+    <!-- footer section -->
     <footer class="footer sm:footer-vartical bg-neutral text-neutral-content px-10 ">
         <div class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 ">
             <nav>
@@ -167,6 +163,8 @@
             <h1 class="font-bold">&copy; All right reserved by Peddy <span id="year"></span></h1>
         </div>
     </footer>
+
+    <!-- script Section -->
     <script>
         const years = new Date()
         document.getElementById('year').textContent = years.getFullYear();

@@ -74,7 +74,7 @@ const loadDetails =(id)=>{
 }
 
 const displayDetails =(data)=>{
-    console.log(data)
+    // console.log(data)
     const detailsContainer = document.getElementById('modalcontent');
     document.getElementById('showmodal').click();
     detailsContainer.innerHTML=`
