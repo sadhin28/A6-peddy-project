@@ -3,7 +3,10 @@
 const loadCatagories = () => {
      fetch('https://openapi.programming-hero.com/api/peddy/categories')
      .then(res => res.json())
-     .then((data)=>displayCatagories(data.categories))
+     .then((data)=>{
+        displayCatagories(data.categories)
+        // console.log(data.categories)
+     })
      .catch((error) => console.log(error) )
      
  }
@@ -39,10 +42,13 @@ const individualCatagory =(id)=>{
             displayPet(data.data)
             // console.log(data.data)
             
+           document.getElementById(`${id}`).classList.add('active')
+            
         })
         const PetContainer = document.getElementById('petContainer');
         PetContainer.innerText=""; 
         
+       
 }
 
 const displayPetsIndividual=(id)=>{
@@ -50,6 +56,7 @@ const displayPetsIndividual=(id)=>{
     .then(res => res.json())
     .then((data)=> {
         individualCatagory(data.categories[id-1].category.toLowerCase())
+        
     })
     .catch((error) => console.log(error) )
     
@@ -57,15 +64,9 @@ const displayPetsIndividual=(id)=>{
 
 
 //removeActive button class
-const removeActiveClass=()=>{
-    const buttons = document.getElementsByClassName("category-btn");
-    
-    for(let btn of buttons){
-      btn.classList.remove('active');
-    }
-  }
+
 //
 
-
+ 
 loadCatagories()
 

@@ -19,11 +19,11 @@ const displayPet = (pet) => {
     if(pet.length == 0){
       PetContainer.classList.remove("grid")
       PetContainer.innerHTML=`
-      <div class="min-h-[500px] w-[1100px] mx-auto flex flex-col gap-5 justify-center items-center">
+      <div class=" min-h-[] w-[] lg:min-h-[500px] lg:w-[1100px] md:min-h-[300px] md:w-[900px] mx-auto flex flex-col gap-5 justify-center items-center">
           
       <img class=" p-20 h-[] w-[] mx-auto " src="images/error.webp"/>
 
-      <p class=" font-bold lg:text-2xl md:text-2xl ">Oops!! Sorry, There is no   content here</p>
+      <p class=" mb-10 font-bold lg:text-2xl md:text-2xl ">Oops!! Sorry, There is no   content here</p>
       
       </div> 
 
