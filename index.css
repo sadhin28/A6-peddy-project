@@ -5,3 +5,10 @@
     
     background: rgba(14, 122, 129, 0.1);
 }
+.addopts{
+    box-sizing: border-box;
+    border: 1.5px solid rgb(222, 11, 11);
+    border-radius: 120px;
+    color: red;
+    background: rgba(0, 8, 10, 0.1);
+}
