@@ -58,3 +58,19 @@
     font: bold;
     background: rgba(7, 210, 225, 0.1);
 }
+#sortByPetPrice:hover{
+    box-sizing: border-box;
+    border: 1.5px solid rgb(14, 122, 129);
+    border-radius: 120px;
+    font: bold;
+    background: rgba(5, 9, 255, 0.1);
+    color: black;
+}
+#view:hover{
+    box-sizing: border-box;
+    border: 1.5px solid rgb(14, 122, 129);
+    border-radius: 120px;
+    font: bold;
+    background: rgba(5, 9, 255, 0.1);
+    color: black;
+}
