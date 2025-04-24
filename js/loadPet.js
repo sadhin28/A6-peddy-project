@@ -73,7 +73,7 @@ sortPet()
                          
                           ${element.date_of_birth == null ? `<span><i class="fa-solid fa-cake-candles"></i> Birth : Not Available</span>`:`<span><i class="fa-solid fa-cake-candles"></i> Birth ${element.date_of_birth} </span> `}
                           ${element.gender == undefined ? `<span><i class="fa-solid fa-mercury"></i> Gender :  Not Found </span>`:`<span><i class="fa-solid fa-mercury"></i> Gender : ${element.gender} </span>`}
-                           ${element.price == null ? `<span><i class="fa-solid fa-dollar-sign"></i> Price : Negotiable</span>`:`<span><i class="fa-solid fa-dollar-sign"></i> Price : ${element.price}</span>`}
+                           ${element.price == null ? `<span><i class="fa-solid fa-dollar-sign"></i> Price : Negotiable</span>`:`<span><i class="fa-solid fa-dollar-sign"></i> Price : ${element.price} $</span>`}
                          
                           <div class="divider"></div>
                           <div class="flex justify-between" >
@@ -110,16 +110,21 @@ const displayDetails =(data)=>{
 
         <img class="rounded-2xl object-cover h-70 w-full " src=${data.petData.image}/>
          <p class="font-bold text-xl mt-2">${data.petData.pet_name}</p>
-        <div class="flex gap-10 mt-2">
+        <div class=" flex justify-between">
        
-                       <div> 
-                            <p>Breed : ${data.petData.breed}</p>
-                             <p><i class="fa-solid fa-cake-candles"></i> Birth : ${data.petData.date_of_birth}</p>
-                       </div>
-                       <div>
-                            <p class="text-justify"><i class="fa-solid fa-mercury"></i> Gender : ${data.petData.gender}</p>
-                        <p><i class="fa-solid fa-dollar-sign"></i> Price : ${data.petData.price} $</p>
-                       </div>
+                    <div>
+                           <div> ${data.petData.breed == undefined ? `<span>Breed : Not Found </span>`: `Breed : ${data.petData.breed} `}</div>
+                   <div>${data.petData.date_of_birth == null ? `<span><i class="fa-solid fa-cake-candles"></i> Birth : Not Available</span>`:`<span><i class="fa-solid fa-cake-candles"></i> Birth ${data.petData.date_of_birth} </span> `}</div>
+                   
+                    </div>   
+                  
+                  <div>
+                      <div> ${data.petData.gender == undefined ? `<span><i class="fa-solid fa-mercury"></i> Gender :  Not Found </span>`:`<span><i class="fa-solid fa-mercury"></i> Gender : ${data.petData.gender} </span>`}</div>
+                   <div> ${data.petData.price == null ? `<span><i class="fa-solid fa-dollar-sign"></i> Price : Negotiable</span>`:`<span><i class="fa-solid fa-dollar-sign"></i> Price : ${data.petData.price} $</span>`}</div>
+                  </div>
+                  
+                        
+                 
                         
 
         </div>
