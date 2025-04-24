@@ -13,17 +13,13 @@
     background: rgba(0, 8, 10, 0.1);
 }
 
-.usefulLink{
-    /* margin: 10px; */
+.usefulLink:hover{
     box-sizing: border-box;
     border: 1.5px solid rgb(14, 122, 129);
-    /* border-radius: 120px; */
-    height: 30px;
-    width: 60px;
     border-radius: 120px;
-    justify-content: center;
+    height: 30px;
+    width: 70px;
     text-align: center;
-   
     background: rgba(14, 122, 129, 0.1);
 }
 #devails:hover{
