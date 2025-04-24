@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loading Spinner Function</title>
+  <style>
+    #spinner {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="spinner">
+    <div class="loader"></div>
+  </div>
+
+  <button onclick="loadData()">Load Data</button>
+  <div id="result" style="margin-top: 20px;"></div>
+
+  <script>
+    function showSpinner() {
+      document.getElementById('spinner').style.display = 'flex';
+    }
+
+    function hideSpinner() {
+      document.getElementById('spinner').style.display = 'none';
+    }
+
+    async function loadData() {
+      showSpinner();
+
+      // Simulate data loading (e.g., fetch call)
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      // After loading is done
+      document.getElementById('result').textContent = '✅ Data Loaded Successfully!';
+      hideSpinner();
+    }
+  </script>
+
+</body>
+</html>

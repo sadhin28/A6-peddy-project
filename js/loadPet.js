@@ -8,14 +8,41 @@ const Loadpet = () => {
 
         .catch((error) => console.log(error))
 
+        
+
 };
+//sortPet
+const sortPet = () => {
+    fetch(`https://openapi.programming-hero.com/api/peddy/pets`)
+        .then(res => res.json())
+        .then((data) => {
+          const pet = (data.pets)
+          document.getElementById('sortByPetPrice').addEventListener('click',function(){
+            const PetContainer = document.getElementById('petContainer');
+            PetContainer.innerText=""; 
+            const sortedPet =pet.sort((a,b)=>b.price -a.price);
+            displayPet(sortedPet);
+            
+          })
+
+        })
+        
+        .catch((error) => console.log(error))
+        
+        
+
+};
+
+sortPet()
+//sortPetByPrice
 
 
 
 //displayPet
 const displayPet = (pet) => {
   const PetContainer = document.getElementById('petContainer');
-  // console.log(pet)
+  //  console.log(pet)
+  
     if(pet.length == 0){
       PetContainer.classList.remove("grid")
       PetContainer.innerHTML=`
@@ -34,8 +61,7 @@ const displayPet = (pet) => {
     }
     pet.forEach(element => {
         // console.log(element)
-      
-       
+        
         const card = document.createElement('div');
         card.innerHTML =`
                 <div class="card w-80 bg-base-100 shadow-sm mx-auto">
