@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <!-- body -->
+
 <body class="">
     <!-- header section -->
     <header class="sticky top-0 z-100 ">
@@ -59,7 +60,7 @@
             </div>
             <div>
                 <a class="btn mt-5 bg-[#0E7A81] text-white rounded-xl" href="#AdoptBestFriend">View More</a>
-               
+
             </div>
             <div class="">
                 <img class="" src="images/pet.webp" alt="">
@@ -132,8 +133,11 @@
 
 
     <!-- footer section -->
-    <footer class="footer sm:footer-vartical bg-neutral text-neutral-content px-10 ">
-        <div class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 ">
+    <footer class="lg:flex  md:flex  sm:flex-col footer 
+     lg:footer-horizontal bg-neutral text-neutral-content p-10 ">
+       
+        
+        <div class="lg:flex md:flex lg:gap-72 md:gap-52 gap-10 lg:justify-between md:justify-between mx-auto">
             <nav>
                 <div class="flex items-center gap-3">
                     <img src="images/logo.webp" alt="">
@@ -144,7 +148,7 @@
                     Email: info@yourdomain.com <br>
                     Openings hours: 9.00 AM - 5.00 PM</p>
             </nav>
-            <nav>
+            <nav class="grid">
                 <h6 class="footer-title">Useful Links</h6>
                 <a href="#home">Home</a>
                 <a href=""> Shop</a>
@@ -154,11 +158,12 @@
                 <h6 class="footer-title">Drop a Message</h6>
                 <input placeholder="Enter your email" class="input bg-gray-300 text-black rounded-xl " type="text"
                     name="" id="inputEmail">
-                    <div id="message"></div>
-                    <button id="Subscribe"
+                <div id="message"></div>
+                <button id="Subscribe"
                     class=" mt-5 w-70 btn border-none bg-[#0E7A81] text-white rounded-xl">Subscribe</button>
             </nav>
         </div>
+
         <div class="mx-auto mb-10">
             <h1 class="font-bold">&copy; All right reserved by Peddy <span id="year"></span></h1>
         </div>
@@ -169,16 +174,16 @@
         const years = new Date()
         document.getElementById('year').textContent = years.getFullYear();
         document.getElementById('Subscribe').addEventListener('click', function () {
-        
-        const  inputemail = document.getElementById('inputEmail').value
-           if(inputemail === '' || !isNaN(inputemail)){
-             alert('Place Enter Your Valid Email')
-             document.getElementById('inputEmail').value =''
-           }
-           else{
-            alert(`Thank's For Subscribe By Your Email: ${inputemail}` );
-             document.getElementById('inputEmail').value =''
-           }
+
+            const inputemail = document.getElementById('inputEmail').value
+            if (inputemail === '' || !isNaN(inputemail)) {
+                alert('Place Enter Your Valid Email')
+                document.getElementById('inputEmail').value = ''
+            }
+            else {
+                alert(`Thank's For Subscribe By Your Email: ${inputemail}`);
+                document.getElementById('inputEmail').value = ''
+            }
         })
     </script>
     <script src="js/loadPet.js"></script>
