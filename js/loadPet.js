@@ -77,9 +77,9 @@ sortPet()
                          
                           <div class="divider"></div>
                           <div class="flex justify-between" >
-                              <button onclick="loadimage(${element.petId})" class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81]"><i class=" border-cyan-950 text-black fa-solid fa-thumbs-up"></i></button>
-                              <button id="Btn-${element.petId}" onclick="startCountdownModal(${element.petId})" class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81] addoptpet ">Adopt</button>
-                              <button onclick="loadDetails(${element.petId})" class="btn rounded-xl  bg-[#0E7A811A] font-bold text-[#0E7A81]">Details</i></button>
+                              <button id="likepet" onclick="loadimage(${element.petId})" class="btn rounded-xl  font-bold text-[#0E7A81]"><i class=" like border-cyan-950 text-black fa-solid fa-thumbs-up"></i></button>
+                              <button id="Btn-${element.petId}" onclick="startCountdownModal(${element.petId})" class="btn rounded-xl  font-bold text-[#0E7A81] addoptpet ">Adopt</button>
+                              <button id="devails" onclick="loadDetails(${element.petId})" class="btn rounded-xl  font-bold text-[#0E7A81]">Details</i></button>
                           </div>
                       </div>
                    </div>
