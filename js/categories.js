@@ -38,12 +38,14 @@ const individualCatagory =(id)=>{
     fetch(`https://openapi.programming-hero.com/api/peddy/category/${id}`)
         .then((res)=>res.json())
         .then((data)=>{
-
+            
             displayPet(data.data)
+           
             // console.log(data.data)
           
         })
         const PetContainer = document.getElementById('petContainer');
+        
         PetContainer.innerText=""; 
         
        
@@ -57,6 +59,7 @@ const displayPetsIndividual=(id)=>{
         individualCatagory(data.categories[id-1].category.toLowerCase())
         const activBtn = document.getElementById(`btn-${id}`)
         activBtn.classList.add('active');
+        
     })
     .catch((error) => console.log(error) )
     

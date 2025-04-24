@@ -34,7 +34,7 @@ const sortPet = () => {
 };
 
 sortPet()
-//sortPetByPrice
+
 
 
 
@@ -59,9 +59,11 @@ const displayPet = (pet) => {
     }else{
       PetContainer.classList.add("grid")
     }
+ 
     pet.forEach(element => {
+      
         // console.log(element)
-        
+       
         const card = document.createElement('div');
         card.innerHTML =`
                 <div class="card w-80 bg-base-100 shadow-sm mx-auto">
