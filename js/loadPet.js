@@ -35,63 +35,62 @@ const sortPet = () => {
 
 sortPet()
 
-
-
-
 //displayPet
-const displayPet = (pet) => {
-  const PetContainer = document.getElementById('petContainer');
-  //  console.log(pet)
-  
-    if(pet.length == 0){
-      PetContainer.classList.remove("grid")
-      PetContainer.innerHTML=`
-      <div class=" min-h-[] w-[] lg:min-h-[500px] lg:w-[1100px] md:min-h-[300px] md:w-[900px] mx-auto flex flex-col gap-5 justify-center items-center">
-          
-      <img class=" p-20 h-[] w-[] mx-auto " src="images/error.webp"/>
-
-      <p class=" mb-10 font-bold lg:text-2xl md:text-2xl ">Oops!! Sorry, There is no   content here</p>
-      
-      </div> 
-
-      `
-
-    }else{
-      PetContainer.classList.add("grid")
-    }
- 
-    pet.forEach(element => {
-      
-        // console.log(element)
-       
-        const card = document.createElement('div');
-        card.innerHTML =`
-                <div class="card w-80 bg-base-100 shadow-sm mx-auto">
-                     <div class="card-body">
-                    <div>
-                         <img class="rounded-xl" src=${element.image}/>
-                    </div>
-                        <p class="font-bold text-xl">${element.pet_name}</p>
-                        <p>Breed : ${element.breed}</p>
-                        <p><i class="fa-solid fa-cake-candles"></i> Birth : ${element.date_of_birth}</p>
-                        <p><i class="fa-solid fa-mercury"></i> Gender : ${element.gender}</p>
-                        <p><i class="fa-solid fa-dollar-sign"></i> Price : ${element.price} $</p>
-                        <div class="divider"></div>
-                        <div class="flex justify-between" >
-                            <button onclick="loadimage(${element.petId})" class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81]"><i class=" border-cyan-950 text-black fa-solid fa-thumbs-up"></i></button>
-                            <button id="Btn-${element.petId}" onclick="startCountdownModal(${element.petId})" class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81] addoptpet ">Adopt</button>
-                            <button onclick="loadDetails(${element.petId})" class="btn rounded-xl  bg-[#0E7A811A] font-bold text-[#0E7A81]">Details</i></button>
-                        </div>
-                    </div>
-                 </div>
-                 
-                
-                `
-      PetContainer.append(card) 
+  const displayPet = (pet) => {
+    const PetContainer = document.getElementById('petContainer');
+    //  console.log(pet)
     
+      if(pet.length == 0){
+        PetContainer.classList.remove("grid")
+        PetContainer.innerHTML=`
+        <div class=" min-h-[] w-[] lg:min-h-[500px] lg:w-[1100px] md:min-h-[300px] md:w-[900px] mx-auto flex flex-col gap-5 justify-center items-center">
+            
+        <img class=" p-20 h-[] w-[] mx-auto " src="images/error.webp"/>
+  
+        <p class=" mb-10 font-bold lg:text-2xl md:text-2xl ">Oops!! Sorry, There is no   content here</p>
+        
+        </div> 
+  
+        `
+  
+      }else{
+        PetContainer.classList.add("grid")
+      }
+   
+      pet.forEach(element => {
+        
+          // console.log(element)
+         
+          const card = document.createElement('div');
+          card.innerHTML =`
+                  <div class="card w-80 bg-base-100 shadow-sm mx-auto">
+                       <div class="card-body">
+                      <div>
+                           <img class="rounded-xl" src=${element.image}/>
+                      </div>
+                          <p class="font-bold text-xl">${element.pet_name}</p>
+                          <p>Breed : ${element.breed}</p>
+                          <p><i class="fa-solid fa-cake-candles"></i> Birth : ${element.date_of_birth}</p>
+                          <p><i class="fa-solid fa-mercury"></i> Gender : ${element.gender}</p>
+                          <p><i class="fa-solid fa-dollar-sign"></i> Price : ${element.price} $</p>
+                          <div class="divider"></div>
+                          <div class="flex justify-between" >
+                              <button onclick="loadimage(${element.petId})" class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81]"><i class=" border-cyan-950 text-black fa-solid fa-thumbs-up"></i></button>
+                              <button id="Btn-${element.petId}" onclick="startCountdownModal(${element.petId})" class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81] addoptpet ">Adopt</button>
+                              <button onclick="loadDetails(${element.petId})" class="btn rounded-xl  bg-[#0E7A811A] font-bold text-[#0E7A81]">Details</i></button>
+                          </div>
+                      </div>
+                   </div>
+                   
+                  
+                  `
+        PetContainer.append(card) 
       
-    });
-}
+        
+      });
+  }
+
+
 
 
 //load details
@@ -176,4 +175,6 @@ function startCountdownModal(adopt) {
       }
     }, 1000);
   }
+
+
 Loadpet()
