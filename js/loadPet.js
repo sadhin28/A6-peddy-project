@@ -60,7 +60,7 @@ sortPet()
       pet.forEach(element => {
         
           // console.log(element)
-         
+        
           const card = document.createElement('div');
           card.innerHTML =`
                   <div class="card w-80 bg-base-100 shadow-sm mx-auto">
@@ -69,10 +69,12 @@ sortPet()
                            <img class="rounded-xl" src=${element.image}/>
                       </div>
                           <p class="font-bold text-xl">${element.pet_name}</p>
-                          <p>Breed : ${element.breed}</p>
-                          <p><i class="fa-solid fa-cake-candles"></i> Birth : ${element.date_of_birth}</p>
-                          <p><i class="fa-solid fa-mercury"></i> Gender : ${element.gender}</p>
-                          <p><i class="fa-solid fa-dollar-sign"></i> Price : ${element.price} $</p>
+                          ${element.breed == undefined ? `<span>Breed : Not Found </span>`: `Breed : ${element.breed} `}
+                         
+                          ${element.date_of_birth == null ? `<span><i class="fa-solid fa-cake-candles"></i> Birth : Not Available</span>`:`<span><i class="fa-solid fa-cake-candles"></i> Birth ${element.date_of_birth} </span> `}
+                          ${element.gender == undefined ? `<span><i class="fa-solid fa-mercury"></i> Gender :  Not Found </span>`:`<span><i class="fa-solid fa-mercury"></i> Gender : ${element.gender} </span>`}
+                           ${element.price == null ? `<span><i class="fa-solid fa-dollar-sign"></i> Price : Negotiable</span>`:`<span><i class="fa-solid fa-dollar-sign"></i> Price : ${element.price}</span>`}
+                         
                           <div class="divider"></div>
                           <div class="flex justify-between" >
                               <button onclick="loadimage(${element.petId})" class="btn rounded-xl bg-[#0E7A811A] font-bold text-[#0E7A81]"><i class=" border-cyan-950 text-black fa-solid fa-thumbs-up"></i></button>
